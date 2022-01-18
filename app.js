@@ -1,7 +1,7 @@
 var App = () => {
-  <div>
+  return(<div>
     <GroceryList groceryItems={['milk', 'bread']}/>
-  </div>
+  </div>);
 };
 
 class GroceryListItem extends React.Component {
@@ -30,11 +30,11 @@ class GroceryListItem extends React.Component {
 }
 
 var GroceryList = (props) => {
-  <ul>
+  return(<ul>
     {props.groceryItems.map(items =>
       <GroceryListItem groceryItems={items}/>
     )}
-  </ul>
+  </ul>);
 }
 
 ReactDOM.render(<App />, document.getElementById("app"));
